@@ -12,7 +12,7 @@ jobs:
       - run: npm test
 
       - store_test_results:
-          path: "./junit.xml"
+          path: "./reports/junit.xml"
 
       - store_artifacts:
           path: "./test-report.html"
