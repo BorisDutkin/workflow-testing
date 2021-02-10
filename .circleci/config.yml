@@ -10,3 +10,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm test
+      - store_test_results:
+          path: './coverage/test-report.html'
+      - store_artifacts:
+          path: './coverage/test-report.html'
