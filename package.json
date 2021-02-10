@@ -4,13 +4,14 @@
   "description": "",
   "main": "sketch.js",
   "scripts": {
-    "test": "jest --coverage=true"
+    "test": "jest --coverage=true --testResultsProcessor='jest-junit'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3",
-    "jest-html-reporter": "^3.3.0"
+    "jest-html-reporter": "^3.3.0",
+    "jest-junit": "^12.0.0"
   }
 }
