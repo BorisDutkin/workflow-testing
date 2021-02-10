@@ -8,11 +8,18 @@ jobs:
 
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
+      - run:
+          name: Npm Install Dependencies
+          command: npm install
+
+      - run:
+          name: Run Tests
+          command: npm test
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
 
       - store_test_results:
-          path: "./reports/junit.xml"
+          path: ./reports/junit/
 
       - store_artifacts:
-          path: "./test-report.html"
+          path: ./test-report.html
